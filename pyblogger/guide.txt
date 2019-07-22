@@ -1,0 +1,135 @@
+
+************************************* Setting Up Flask *********************************
+
+1. pip install flask
+2. in python interpreter or in project:
+
+### import flask class from flask package
+
+from flask import Flask
+
+app = Flask(__name__) ### comments
+
+
+************************************* To Run Flask App *********************************
+
+### in command line in project directory
+### in windows you'd use set instead of export to set env variables
+
+export FLASK_APP=nameOfMainFile.py ### setting up environment variable
+flask run
+
+### does not run in debug mode so you have to do flask run again and again to
+### start the app whenever you make changes
+### to avoid this headache run the app in debug mode
+### setting up another environment variable
+
+export FLASK_DEBUG=1
+flask run
+
+### or you can simply put a condition in your main python app file
+
+if __name__ == "__main__":
+    app.run(debug=True)
+
+### this condition is only true if we run this file directly
+### if we import this from a module the name will be the name of the module
+### and file will not run
+
+
+### and in cmd/terminal just enter the command
+
+python nameOfMainFile.py
+
+
+************************************** In routes.py file *******************************
+
+### flask has inbuilt functions called
+### render_template('home.html', posts=posts) to render html templates
+### we can pass data from this function to that webpage / template where it can be used
+
+
+from flask import render_template, url_for, flash, redirect
+from pyblogger import app
+from pyblogger.forms import RegistrationForm, LoginForm
+from pyblogger.models import User,Post
+
+
+@app.route("/") ### create routes
+def test():
+    print('This Function is executed when this route is used')
+
+
+@app.route("/home")
+def home():
+    return render_template('home.html', posts=posts)
+
+
+************************************ How to hash password ******************************
+
+1. pip install flask-bcrypt
+2. in python interpreter:
+--> from flask_bcrypt import Bcrypt
+--> bcrypt = Bcrypt()
+--> hashed_pw = bcrypt.generate_password_hash('password')
+
+or you can use decode function to decode this hash string into suitable encoding
+
+--> hashed_pw = bcrypt.generate_password_hash('password').decode('utf-8')
+
+--> bcrypt.check_password_hash( hashed_pw, 'testing')
+### return false
+
+--> bcrypt.check_password_hash( hashed_pw, 'password')
+### return true
+
+
+************************************ To check database ******************************
+'''/*
+### -> we are using sqlAlchemy a popular ORM (Object Relational Mapper).
+### ORM  enables us to access database, in easy to use object oriented fashion.
+### We can use any different databases without changing our python code.
+### To install sqlalchemy simple do ---
+*/'''
+>> pip install flask-sqlalchemy
+
+
+
+### -> in the terminal , where site.db file resides
+start python
+
+### importing database instance from package
+>> from pyblogger import db
+
+### importing user model or we can say database of user like user table in mysql
+>> from pyblogger.models import User
+
+### grabbing 1st user from the database
+>> user = User.query.first()
+
+### grabbing user with unique id from the database
+>> user = User.query.get(id)
+
+
+
+************************************ To Handle Logins******************************
+### in terminal
+>> pip install flask-login
+
+### in __init__.py
+>> from flask_login import LoginManager
+
+### and in __init__.py create LoginManager object
+>> login_manager = LoginManager(app)
+
+
+# ---- LoginManager is extension in flask_login which expects our User Model to have certain attributes and methods
+# ---- it's going to expect four to be exact --> 1. isAuthenticated(), 2. isActive(), 3. isAnonymous(), 4. getId()
+# ---- isAuthenticated()  return true if user credentials are proper,
+# ---- we can add all of these ourselves but the extension provides class from which we can inherit them this class
+# ---- is called UserMixin import it from flask_login in models.py
+>> from flask_login import UserMixin
+
+
+
+
