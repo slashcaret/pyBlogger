@@ -4,9 +4,11 @@
     <bookmark url="file://$PROJECT_DIR$/run.py" line="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d78c4337-16a6-4be0-8089-c8b88edc5f08" name="Default Changelist" comment="testing with pycharm">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/run.py" afterDir="false" />
+    <list default="true" id="d78c4337-16a6-4be0-8089-c8b88edc5f08" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/pyblogger/templates/account.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyblogger/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/pyblogger/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyblogger/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/pyblogger/routes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyblogger/templates/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/pyblogger/templates/layout.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,11 +39,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pyblogger/routes.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="322">
-              <caret line="62" column="1" selection-start-line="62" selection-start-column="1" selection-end-line="62" selection-end-column="1" />
+              <caret line="62" selection-start-line="62" selection-end-line="62" />
               <folding>
                 <element signature="e#0#59#0" expanded="true" />
               </folding>
@@ -91,11 +93,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pyblogger/templates/layout.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="196" column="31" lean-forward="true" selection-start-line="196" selection-start-column="31" selection-end-line="196" selection-end-column="31" />
+            <state relative-caret-position="126">
+              <caret line="203" column="25" selection-start-line="203" selection-start-column="25" selection-end-line="203" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -288,7 +290,14 @@
       <option name="project" value="LOCAL" />
       <updated>1563803808817</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="created account route and account.html page">
+      <created>1563807849118</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1563807849118</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView">
@@ -304,7 +313,7 @@
     <frame x="0" y="-1" width="1366" height="769" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49689442" weight="0.19508563" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49689442" visible="true" weight="0.19508563" />
       <window_info id="Structure" order="1" sideWeight="0.5031056" side_tool="true" weight="0.19508563" />
       <window_info id="Favorites" order="2" sideWeight="0.5031056" side_tool="true" weight="0.19508563" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -322,25 +331,6 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
-    <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49689442" visible="true" weight="0.19508563" />
-      <window_info id="Structure" order="1" sideWeight="0.5031056" side_tool="true" weight="0.19508563" />
-      <window_info id="Favorites" order="2" sideWeight="0.5031056" side_tool="true" weight="0.19508563" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32972136" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.6832298" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32919255" />
-      <window_info anchor="bottom" id="Version Control" order="7" type="SLIDING" weight="0.30745342" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4996277" weight="0.4456522" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5003723" side_tool="true" weight="0.48913044" />
-      <window_info anchor="bottom" id="Python Console" order="10" weight="0.5574534" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout-to-restore>
   </component>
   <component name="Vcs.Log.History.Properties">
     <option name="SHOW_DIFF_PREVIEW" value="false" />
@@ -373,7 +363,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="testing with pycharm" />
-    <option name="LAST_COMMIT_MESSAGE" value="testing with pycharm" />
+    <MESSAGE value="created account route and account.html page" />
+    <option name="LAST_COMMIT_MESSAGE" value="created account route and account.html page" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/pyblogger/static/main.css">
@@ -466,13 +457,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pyblogger/templates/layout.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="196" column="31" lean-forward="true" selection-start-line="196" selection-start-column="31" selection-end-line="196" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/run.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
@@ -497,10 +481,17 @@
     <entry file="file://$PROJECT_DIR$/pyblogger/routes.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
-          <caret line="62" column="1" selection-start-line="62" selection-start-column="1" selection-end-line="62" selection-end-column="1" />
+          <caret line="62" selection-start-line="62" selection-end-line="62" />
           <folding>
             <element signature="e#0#59#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pyblogger/templates/layout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="203" column="25" selection-start-line="203" selection-start-column="25" selection-end-line="203" selection-end-column="25" />
         </state>
       </provider>
     </entry>
