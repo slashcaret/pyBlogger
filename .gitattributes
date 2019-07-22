@@ -1,2 +1,3 @@
-pyBlogger/static/* linguist-vendored
-pyBlogger/templates/* linguist-vendored
+*.css
+*.html
+linguist-language=Python
