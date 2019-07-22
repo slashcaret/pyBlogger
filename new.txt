@@ -1,2 +1,0 @@
-pyBlogger/static/* linguist-vendored
-pyBlogger/templates/* linguist-vendored
