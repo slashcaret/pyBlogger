@@ -1,8 +1,8 @@
-from flask import render_template, url_for, flash, redirect
+from flask import render_template, url_for, flash, redirect, request
 from pyblogger import app, db, bcrypt
 from pyblogger.forms import RegistrationForm, LoginForm
 from pyblogger.models import User, Post
-from flask_login import login_user, current_user, logout_user
+from flask_login import login_user, current_user, logout_user ,login_required
 from pyblogger.data import posts
 
 
@@ -54,10 +54,12 @@ def login():
         if user and bcrypt.check_password_hash(user.password, form.password.data):
             ### logins the user, also remember me and duration functionality can be used
             login_user(user, remember= form.remember.data)
+            ### redirects the user to account page if the query is present in the url box
+            next_page = request.args.get('next')
             ### flashing login success message on the redirected page
             flash(f'Welcome {user.username}', 'success')
 
-            return redirect(url_for('home'))
+            return redirect(next_page) if next_page else redirect(url_for('home'))
 
         else:
             flash(f'Login Unsuccessful ! Please Check Email and Password...', 'danger')
@@ -68,3 +70,8 @@ def login():
 def logout():
     logout_user()
     return redirect(url_for('login'))
+
+@app.route("/account" )
+@login_required
+def account():
+    return render_template('account.html', title='Account')
